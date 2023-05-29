@@ -1,11 +1,11 @@
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      {children}
+      <div className="px-4 container mx-auto xl:max-w-screen-xl">{children}</div>
       <Footer />
     </>
   );
