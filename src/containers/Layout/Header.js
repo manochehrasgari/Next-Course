@@ -3,7 +3,6 @@ import { signIn, signOut, useSession } from "next-auth/react";
 
 const Header = () => {
   const { data: session, status } = useSession();
-  console.log({ session, status });
   return (
     <nav className="bg-white w-full h-20 mb-12 shadow-md py-4 px-8">
       <div className="container mx-auto xl:max-w-screen-xl flex justify-between items-center">
@@ -13,7 +12,7 @@ const Header = () => {
             <Link href="/">Home</Link>
           </li>
           <li className="p-2">
-            <Link href="/">Todos</Link>
+            <Link href="/protected-ssr">protected-ssr</Link>
           </li>
           <li className="p-2">
             <Link href="/profile">Profile</Link>

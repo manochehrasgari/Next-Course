@@ -19,7 +19,7 @@ const Profile = () => {
 
     return ( 
         <Layout>
-            <div>{session.user.name} Wellcome To Profile Page</div>
+            <div>{session.user.name}, Wellcome To Profile Page</div>
         </Layout>
      );
 }
