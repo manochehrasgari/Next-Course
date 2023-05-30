@@ -17,7 +17,7 @@ export default ProtectedSSR;
 
 export async function getServerSideProps(ctx){
     const session = await getSession(ctx)
-
+    console.log(ctx);
     if(!session){
         return {
             redirect : {
