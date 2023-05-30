@@ -3,6 +3,7 @@ import { getSession, useSession } from "next-auth/react";
 
 const ProtectedSSR = () => {
     const {data:session} = useSession()
+    console.log(session)
     
     return ( 
         <Layout>
@@ -17,7 +18,7 @@ export default ProtectedSSR;
 
 export async function getServerSideProps(ctx){
     const session = await getSession(ctx)
-    console.log(ctx);
+
     if(!session){
         return {
             redirect : {
